@@ -1,0 +1,44 @@
+services:
+  node-exporter:
+    image: prom/node-exporter:v1
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - '/:/host:ro,rslave'
+
+  prometheus:
+    image: prom/prometheus:v3
+    restart: unless-stopped
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  grafana:
+    image: grafana/grafana:13.2
+    restart: unless-stopped
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    ports:
+      - "3000:3000"
+
+  #alertmanager:
+  #  image: prom/alertmanager:v0.35.0
+  #  restart: unless-stopped
+  #  volumes:
+  #    - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+  #  ports:
+  #    - "9093:9093"
+
