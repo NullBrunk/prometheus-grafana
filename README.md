@@ -1,2 +1,12 @@
+<div align="center">
+
 # prometheus-grafana
-Monitoring lab with Prometheus, Grafana and node-exporter (WiP)
+_Monitoring lab with Prometheus, Grafana and node-exporter (WiP)_
+
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)
+
+[//]: # ![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C)
+</div>
