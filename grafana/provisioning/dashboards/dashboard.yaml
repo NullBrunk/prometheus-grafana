@@ -3,8 +3,7 @@ apiVersion: 1
 providers:
   - name: 'Default'
     type: file
-    disableDeletion: false
-    updateIntervalSeconds: 10
-    editable: true
+    disableDeletion: true
+    updateIntervalSeconds: 120
     options:
       path: /etc/grafana/provisioning/dashboards/definitions

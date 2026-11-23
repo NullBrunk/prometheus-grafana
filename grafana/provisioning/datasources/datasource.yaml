@@ -7,9 +7,6 @@ datasources:
     orgId: 1
     uid: "default_prometheus_ds"
     url: http://prometheus:9090
-    basicAuth: false
     isDefault: true
     jsonData:
       timeInterval: 15s
-      tlsAuth: false
-      tlsAuthWithCACert: false

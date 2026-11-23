@@ -15,8 +15,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./prometheus/:/etc/prometheus/
-    command:
-      - --config.file=/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     extra_hosts:
@@ -25,10 +23,6 @@ services:
   grafana:
     image: grafana/grafana:13.2
     restart: unless-stopped
-    environment:
-      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
-      - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_BASIC_ENABLED=false
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
     ports:
