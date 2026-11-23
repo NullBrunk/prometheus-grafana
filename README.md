@@ -1,2 +1,2 @@
 # prometheus-grafana
-Prometheus/Grafana Lab
+Monitoring lab with Prometheus, Grafana and node-exporter (WiP)
