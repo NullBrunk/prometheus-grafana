@@ -8,5 +8,6 @@ _Monitoring lab with Prometheus, Grafana and node-exporter (WiP)_
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)
 
-[//]: # ![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C)
+<!-- ![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C) -->
+
 </div>
