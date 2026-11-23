@@ -1,7 +1,7 @@
 <div align="center">
 
 # prometheus-grafana
-_Monitoring lab with Prometheus, Grafana and node-exporter (WiP)_
+_Monitoring lab with the Prometheus + Grafana stack (WiP)_
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
