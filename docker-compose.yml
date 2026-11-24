@@ -13,8 +13,12 @@ services:
   prometheus:
     image: prom/prometheus:v3
     restart: unless-stopped
+    command:
+      - --storage.tsdb.path=/prometheus
+      - --config.file=/etc/prometheus/prometheus.yml
     volumes:
       - ./prometheus/:/etc/prometheus/
+      - ./data/prometheus:/prometheus
     ports:
       - "9090:9090"
     extra_hosts:
@@ -25,6 +29,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./data/grafana:/var/lib/grafana
     ports:
       - "3000:3000"
 
