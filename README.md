@@ -11,3 +11,12 @@ _Monitoring lab with the Prometheus + Grafana stack (WiP)_
 <!-- ![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C) -->
 
 </div>
+
+
+```
+git clone https://github.com/NullBrunk/prometheus-grafana/
+cd prometheus-grafana/
+
+sudo chown -R 65534:65534 data/prometheus
+sudo chown -R 472:472 data/grafana
+```
